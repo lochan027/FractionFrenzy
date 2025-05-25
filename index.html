@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraction Frenzy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fraction Frenzy</h1>
+            <p class="subtitle">Master fractions with speed and precision!</p>
+        </header>
+
+        <section id="login-section">
+            <h2>Welcome to Fraction Frenzy!</h2>
+            <div class="login-form">
+                <input type="text" id="username" placeholder="Enter your username">
+                <button id="start-game" class="pulse-button">Start Playing</button>
+            </div>
+        </section>
+
+        <section id="mode-selection" style="display: none;">
+            <h2>Choose Your Challenge</h2>
+            <div class="mode-buttons">
+                <div class="mode-card">
+                    <h3>Easy Mode</h3>
+                    <p>Perfect for beginners!</p>
+                    <button class="mode-btn" data-mode="easy">Start Easy</button>
+                </div>
+                <div class="mode-card">
+                    <h3>Hard Mode</h3>
+                    <p>Challenge yourself!</p>
+                    <button class="mode-btn" data-mode="hard">Start Hard</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-area" style="display: none;">
+            <div class="score-board">
+                <div class="score-item">
+                    <span>Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span>Time:</span>
+                    <span id="timer">60</span>
+                </div>
+                <div class="score-item">
+                    <span>Questions:</span>
+                    <span id="questions">0</span>
+                </div>
+            </div>
+
+            <div class="fraction-display">
+                <span id="fraction">1/2</span>
+            </div>
+
+            <div class="options-container" id="options">
+                <!-- Options will be dynamically added here with visual representation -->
+            </div>
+        </section>
+
+        <section id="game-over" style="display: none;">
+            <h2>Game Over!</h2>
+            <p>Your final score: <span id="final-score">0</span></p>
+            <button id="restart" class="pulse-button">Play Again</button>
+        </section>
+
+        <section id="leaderboard-section" class="leaderboard-section">
+            <h2>Leaderboard</h2>
+            <select id="leaderboard-mode">
+                <option value="easy">Easy Mode</option>
+                <option value="hard">Hard Mode</option>
+            </select>
+            <div class="leaderboard-container">
+                <table id="leaderboard">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Username</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Leaderboard entries will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</body>
+</html> 
